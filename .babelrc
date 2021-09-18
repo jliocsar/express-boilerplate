@@ -1,0 +1,19 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "~api": "./src/api",
+          "~middlewares": "./src/api/middlewares",
+          "~modules": "./src/api/modules",
+          "~shared": "./src/api/shared",
+          "~config": "./src/config",
+          "~database": "./src/database"
+        }
+      }
+    ]
+  ]
+}

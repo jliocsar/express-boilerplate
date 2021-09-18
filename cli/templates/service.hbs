@@ -1,0 +1,43 @@
+import { prisma } from '~database/client'
+
+import { {{pascalCase moduleName}}NotFoundException } from './exceptions'
+
+export const findAll{{pascalCase moduleName}}s = () => prisma.{{camelCase moduleName}}.findMany()
+
+export const find{{pascalCase moduleName}} = async id => {
+  const {{camelCase moduleName}} = await prisma.{{camelCase moduleName}}.findUnique({
+    where: { id },
+  })
+
+  if (!{{camelCase moduleName}}) {
+    throw new {{pascalCase moduleName}}NotFoundException()
+  }
+
+  return {{camelCase moduleName}}
+}
+
+export const deleteAll{{pascalCase moduleName}}s = () => prisma.{{camelCase moduleName}}.deleteMany()
+
+export const delete{{pascalCase moduleName}} = async id => {
+  try {
+    return await prisma.{{camelCase moduleName}}.delete({
+      where: { id },
+    })
+  } catch (error) {
+    switch (error.code) {
+      case 'P2025':
+        throw new {{pascalCase moduleName}}NotFoundException()
+      default:
+        throw error
+    }
+  }
+}
+
+export const create{{pascalCase moduleName}} = body =>
+  prisma.{{camelCase moduleName}}.create({
+    data: {
+      name: body.name,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    },
+  })

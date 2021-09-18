@@ -1,0 +1,25 @@
+import { Router } from 'express'
+
+import {
+  findAll{{pascalCase moduleName}}s,
+  create{{pascalCase moduleName}},
+  deleteAll{{pascalCase moduleName}}s,
+  find{{pascalCase moduleName}},
+  delete{{pascalCase moduleName}},
+} from './controller'
+import { validate{{pascalCase moduleName}}, validate{{pascalCase moduleName}}Id } from './pipes'
+
+const {{camelCase moduleName}}sRouter = Router()
+
+{{camelCase moduleName}}sRouter
+  .route('/{{dashCase moduleName}}')
+  .get(findAll{{pascalCase moduleName}}s)
+  .delete(deleteAll{{pascalCase moduleName}}s)
+  .post([validate{{pascalCase moduleName}}], create{{pascalCase moduleName}})
+
+{{camelCase moduleName}}sRouter
+  .route('/{{dashCase moduleName}}/:id')
+  .get([validate{{pascalCase moduleName}}Id], find{{pascalCase moduleName}})
+  .delete([validate{{pascalCase moduleName}}Id], delete{{pascalCase moduleName}})
+
+export { {{camelCase moduleName}}sRouter }

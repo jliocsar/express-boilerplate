@@ -1,0 +1,9 @@
+import { Http } from '@status/codes'
+
+import { PrismaException } from '~api/shared/exceptions'
+
+export class {{pascalCase moduleName}}NotFoundException extends PrismaException {
+  constructor() {
+    super('{{pascalCase moduleName}} not found', Http.NotFound)
+  }
+}

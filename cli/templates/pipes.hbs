@@ -1,0 +1,15 @@
+import { Joi, Segments } from 'celebrate'
+
+import { createValidationMiddleware } from '~api/shared/pipes'
+
+import { {{pascalCase moduleName}}Schema } from './schemas'
+
+export const validate{{pascalCase moduleName}} = createValidationMiddleware({
+  [Segments.BODY]: {{pascalCase moduleName}}Schema,
+})
+
+export const validate{{pascalCase moduleName}}Id = createValidationMiddleware({
+  [Segments.PARAMS]: Joi.object().keys({
+    id: Joi.number().required(),
+  }),
+})

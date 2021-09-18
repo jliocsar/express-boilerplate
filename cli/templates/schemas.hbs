@@ -1,0 +1,7 @@
+import { Joi } from 'celebrate'
+
+export const {{camelCase moduleName}}Schema = Joi.object({
+  name: Joi.string().required(),
+  createdAt: Joi.date(),
+  updatedAt: Joi.date(),
+})

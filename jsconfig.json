@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "outDir": "./build",
+    "rootDir": ".",
+    "paths": {
+      "~api/*": ["./src/api/*"],
+      "~middlewares/*": ["./src/api/middlewares/*"],
+      "~modules/*": ["./src/api/modules/*"],
+      "~shared/*": ["./src/api/shared/*"],
+      "~config/*": ["./src/config/*"],
+      "~database/*": ["./src/database/*"]
+    }
+  },
+  "exclude": ["node_modules", "build", "coverage"]
+}

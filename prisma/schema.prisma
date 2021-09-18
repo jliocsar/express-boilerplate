@@ -1,0 +1,39 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["interactiveTransactions"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id          Int       @id @default(autoincrement())
+  cutter      String    @unique
+  title       String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now())
+  author      Author    @relation(fields: [authorId], references: [id])
+  authorId    Int
+  publisher   Publisher @relation(fields: [publisherId], references: [id])
+  publisherId Int
+}
+
+model Author {
+  id           Int      @id @default(autoincrement())
+  registerCode String   @unique
+  name         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @default(now())
+  books        Book[]
+}
+
+model Publisher {
+  id           Int      @id @default(autoincrement())
+  registerCode String   @unique
+  name         String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @default(now())
+  books        Book[]
+}
