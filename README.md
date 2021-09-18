@@ -24,7 +24,7 @@ sudo docker-compose up
 yarn dev
 ```
 
-### Generating a module or validation pipe with Plop
+### Generating a module or validation pipe using Plop
 
 ```sh
 yarn plop
@@ -42,36 +42,36 @@ yarn plop
 ## 🌳 Folder structure
 
 ```
-  |- ...
-  |- prisma/
-    |- migrations/
+|- ...
+|- prisma/
+  |- migrations/
+    |- ...
+  |- .env
+  |- dev.db
+  |- schema.prisma
+|- src/
+  |- app.js
+  |- config/
+  |- database/
+  |- jobs/
+  |- api/
+    |- router.js
+    |- setup.js
+    |- middlewares/
+      |- middlewareName.js
+    |_ shared/
+      |- exceptions.js
+      |- pipes.js
       |- ...
-    |- .env
-    |- dev.db
-    |- schema.prisma
-  |- src/
-    |- app.js
-    |- config/
-    |- database/
-    |- jobs/
-    |- api/
-      |- router.js
-      |- setup.js
-      |- middlewares/
-        |- middlewareName.js
-      |_ shared/
+    |- modules/
+      |- module-name/
+        |- controller.js
+        |- routes.js
+        |- schemas.js
+        |- service.js
         |- exceptions.js
         |- pipes.js
-        |- ...
-      |- modules/
-        |- module-name/
-          |- controller.js
-          |- routes.js
-          |- schemas.js
-          |- service.js
-          |- exceptions.js
-          |- pipes.js
-          |- constants.js
+        |- constants.js
 ```
 
 ## Module composition
