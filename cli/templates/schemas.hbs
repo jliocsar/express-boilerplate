@@ -5,3 +5,7 @@ export const {{camelCase moduleName}}Schema = Joi.object({
   createdAt: Joi.date(),
   updatedAt: Joi.date(),
 })
+
+export const {{camelCase moduleName}}IdSchema = Joi.object({
+  id: Joi.number().positive().required(),
+})
