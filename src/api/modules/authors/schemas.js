@@ -6,3 +6,7 @@ export const authorSchema = Joi.object({
   createdAt: Joi.date(),
   updatedAt: Joi.date(),
 })
+
+export const authorIdSchema = Joi.object({
+  id: Joi.number().positive().required(),
+})

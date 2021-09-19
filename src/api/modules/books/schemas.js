@@ -13,3 +13,7 @@ export const bookSchema = Joi.object({
   publisher: publisherSchema,
   publisherId: Joi.number().positive(),
 })
+
+export const bookIdSchema = Joi.object({
+  id: Joi.number().positive().required(),
+})
