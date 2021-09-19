@@ -69,11 +69,9 @@ export const createBook = async body => {
       select: BOOK_SELECT,
     })
   } catch (error) {
-    // TODO: find a better way to handle Prisma errors
     switch (error.code) {
       case PrismaError.UniqueConstraintViolation:
         throw new UniqueCutterViolationException()
-      // TODO: not handled in `prisma-error-enum` yet; open a PR maybe?
       case PrismaError.RecordsNotFound:
         throw new RecordNotFoundException(error.meta.cause)
       default:

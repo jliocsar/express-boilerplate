@@ -14,8 +14,7 @@ module.exports = [
         type: 'add',
         path: 'src/api/modules/{{dashCase moduleName}}/controller.js',
         templateFile: 'cli/templates/controller.hbs',
-        // force will create the module folder
-        force: true,
+        force: true, // force will create the module folder
       },
       {
         type: 'add',

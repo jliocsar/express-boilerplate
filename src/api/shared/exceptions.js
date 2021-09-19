@@ -12,7 +12,6 @@ export class HttpException extends Error {
   }
 }
 
-// TODO: check for necessary errors to extend
 export class NotFoundException extends HttpException {
   constructor() {
     super('Not found', Http.NotFound)
