@@ -35,7 +35,7 @@ export const deleteAuthor = async id => {
     })
   } catch (error) {
     switch (error.code) {
-      case 'P2025':
+      case PrismaError.RecordsNotFound:
         throw new AuthorNotFoundException()
       default:
         throw error

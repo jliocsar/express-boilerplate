@@ -39,7 +39,7 @@ export const deleteBook = async id => {
     })
   } catch (error) {
     switch (error.code) {
-      case 'P2025':
+      case PrismaError.RecordsNotFound:
         throw new BookNotFoundException()
       default:
         throw error
@@ -74,7 +74,7 @@ export const createBook = async body => {
       case PrismaError.UniqueConstraintViolation:
         throw new UniqueCutterViolationException()
       // TODO: not handled in `prisma-error-enum` yet; open a PR maybe?
-      case 'P2025':
+      case PrismaError.RecordsNotFound:
         throw new RecordNotFoundException(error.meta.cause)
       default:
         throw error

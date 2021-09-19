@@ -1,3 +1,5 @@
+import { PrismaError } from 'prisma-error-enum'
+
 import { prisma } from '~database/client'
 
 import { {{pascalCase moduleName}}NotFoundException } from './exceptions'
@@ -25,7 +27,7 @@ export const delete{{pascalCase moduleName}} = async id => {
     })
   } catch (error) {
     switch (error.code) {
-      case 'P2025':
+      case PrismaError.RecordsNotFound:
         throw new {{pascalCase moduleName}}NotFoundException()
       default:
         throw error

@@ -35,7 +35,7 @@ export const deletePublisher = async id => {
     })
   } catch (error) {
     switch (error.code) {
-      case 'P2025':
+      case PrismaError.RecordsNotFound:
         throw new PublisherNotFoundException()
       default:
         throw error

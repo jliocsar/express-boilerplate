@@ -3766,10 +3766,10 @@ prepend-http@^2.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
 
-prisma-error-enum@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/prisma-error-enum/-/prisma-error-enum-0.1.1.tgz#007bfb1e0b2eb93aeb2cb915de48d0d9bf5679fa"
-  integrity sha512-9reItb/wnIFblpEcjKUXcAifbyrv/iyOqM5g4WaC1J26bsZ9C3904gZFbxrkHGcraNpBXhKrmq2gfxRkdjB9Qg==
+prisma-error-enum@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/prisma-error-enum/-/prisma-error-enum-0.1.2.tgz#973f63f3ef1a1fe3d559d4ee876b85edb515801a"
+  integrity sha512-O70RgSy++Vojnlg9RIrmheoja7IRgtmka7fDJWmSOWst8EHRnc3pP07GujFOvnlF6f42gzZ65+Ny8ICjhU3TYg==
 
 prisma@^3.0.2:
   version "3.0.2"
