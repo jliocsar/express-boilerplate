@@ -54,12 +54,13 @@ yarn plop
   |- config/
   |- database/
   |- jobs/
+  |- utils/
   |- api/
     |- router.js
     |- setup.js
     |- middlewares/
       |- middlewareName.js
-    |_ shared/
+    |- shared/
       |- exceptions.js
       |- pipes.js
       |- ...
