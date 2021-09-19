@@ -11,7 +11,8 @@
           "~modules": "./src/api/modules",
           "~shared": "./src/api/shared",
           "~config": "./src/config",
-          "~database": "./src/database"
+          "~database": "./src/database",
+          "~utils": "./src/utils"
         }
       }
     ]
