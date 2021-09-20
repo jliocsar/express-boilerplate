@@ -2,29 +2,29 @@ import { Http } from '@status/codes'
 
 import * as publishersService from './service'
 
-export const findAllPublishers = async (req, res, next) => {
+export const findAllPublishers = async (request, response, next) => {
   const allPublishers = await publishersService.findAllPublishers()
-  return res.json(allPublishers)
+  return response.json(allPublishers)
 }
 
-export const findPublisher = async (req, res, next) => {
-  const publisher = await publishersService.findPublisher(req.params.id)
-  return res.json(publisher)
+export const findPublisher = async (request, response, next) => {
+  const publisher = await publishersService.findPublisher(request.params.id)
+  return response.json(publisher)
 }
 
-export const deleteAllPublishers = async (req, res, next) => {
+export const deleteAllPublishers = async (request, response, next) => {
   const deletedPublishers = await publishersService.deleteAllPublishers()
-  return res.status(Http.NoContent).json(deletedPublishers)
+  return response.status(Http.NoContent).json(deletedPublishers)
 }
 
-export const deletePublisher = async (req, res, next) => {
+export const deletePublisher = async (request, response, next) => {
   const deletedPublisher = await publishersService.deletePublisher(
-    req.params.id,
+    request.params.id,
   )
-  return res.status(Http.NoContent).json(deletedPublisher)
+  return response.status(Http.NoContent).json(deletedPublisher)
 }
 
-export const createPublisher = async (req, res, next) => {
-  const createdPublisher = await publishersService.createPublisher(req.body)
-  return res.status(Http.Created).json(createdPublisher)
+export const createPublisher = async (request, response, next) => {
+  const createdPublisher = await publishersService.createPublisher(request.body)
+  return response.status(Http.Created).json(createdPublisher)
 }

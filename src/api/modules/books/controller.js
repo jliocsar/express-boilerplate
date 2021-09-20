@@ -2,27 +2,27 @@ import { Http } from '@status/codes'
 
 import * as booksService from './service'
 
-export const findAllBooks = async (req, res, next) => {
+export const findAllBooks = async (request, response, next) => {
   const allBooks = await booksService.findAllBooks()
-  return res.json(allBooks)
+  return response.json(allBooks)
 }
 
-export const findBook = async (req, res, next) => {
-  const book = await booksService.findBook(req.params.id)
-  return res.json(book)
+export const findBook = async (request, response, next) => {
+  const book = await booksService.findBook(request.params.id)
+  return response.json(book)
 }
 
-export const deleteAllBooks = async (req, res, next) => {
+export const deleteAllBooks = async (request, response, next) => {
   const deletedBooks = await booksService.deleteAllBooks()
-  return res.status(Http.NoContent).json(deletedBooks)
+  return response.status(Http.NoContent).json(deletedBooks)
 }
 
-export const deleteBook = async (req, res, next) => {
-  const deletedBook = await booksService.deleteBook(req.params.id)
-  return res.status(Http.NoContent).json(deletedBook)
+export const deleteBook = async (request, response, next) => {
+  const deletedBook = await booksService.deleteBook(request.params.id)
+  return response.status(Http.NoContent).json(deletedBook)
 }
 
-export const createBook = async (req, res, next) => {
-  const createdBook = await booksService.createBook(req.body)
-  return res.status(Http.Created).json(createdBook)
+export const createBook = async (request, response, next) => {
+  const createdBook = await booksService.createBook(request.body)
+  return response.status(Http.Created).json(createdBook)
 }

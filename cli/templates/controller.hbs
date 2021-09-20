@@ -2,27 +2,27 @@ import { Http } from '@status/codes'
 
 import * as {{camelCase moduleName}}Service from './service'
 
-export const findAll{{pascalCase moduleName}}s = async (req, res, next) => {
+export const findAll{{pascalCase moduleName}}s = async (request, response, next) => {
   const all{{pascalCase moduleName}}s = await {{camelCase moduleName}}Service.findAll{{pascalCase moduleName}}s()
-  return res.json(all{{pascalCase moduleName}}s)
+  return response.json(all{{pascalCase moduleName}}s)
 }
 
-export const find{{pascalCase moduleName}} = async (req, res, next) => {
-  const {{camelCase moduleName}} = await {{camelCase moduleName}}Service.find{{pascalCase moduleName}}(req.params.id)
-  return res.json({{camelCase moduleName}})
+export const find{{pascalCase moduleName}} = async (request, response, next) => {
+  const {{camelCase moduleName}} = await {{camelCase moduleName}}Service.find{{pascalCase moduleName}}(request.params.id)
+  return response.json({{camelCase moduleName}})
 }
 
-export const deleteAll{{pascalCase moduleName}}s = async (req, res, next) => {
+export const deleteAll{{pascalCase moduleName}}s = async (request, response, next) => {
   const deleted{{pascalCase moduleName}}s = await {{camelCase moduleName}}Service.deleteAll{{pascalCase moduleName}}s()
-  return res.status(Http.NoContent).json(deleted{{pascalCase moduleName}}s)
+  return response.status(Http.NoContent).json(deleted{{pascalCase moduleName}}s)
 }
 
-export const delete{{pascalCase moduleName}} = async (req, res, next) => {
-  const deleted{{pascalCase moduleName}} = await {{camelCase moduleName}}Service.delete{{pascalCase moduleName}}(req.params.id)
-  return res.status(Http.NoContent).json(deleted{{pascalCase moduleName}})
+export const delete{{pascalCase moduleName}} = async (request, response, next) => {
+  const deleted{{pascalCase moduleName}} = await {{camelCase moduleName}}Service.delete{{pascalCase moduleName}}(request.params.id)
+  return response.status(Http.NoContent).json(deleted{{pascalCase moduleName}})
 }
 
-export const create{{pascalCase moduleName}} = async (req, res, next) => {
-  const created{{pascalCase moduleName}} = await {{camelCase moduleName}}Service.create{{pascalCase moduleName}}(req.body)
-  return res.status(Http.Created).json(created{{pascalCase moduleName}})
+export const create{{pascalCase moduleName}} = async (request, response, next) => {
+  const created{{pascalCase moduleName}} = await {{camelCase moduleName}}Service.create{{pascalCase moduleName}}(request.body)
+  return response.status(Http.Created).json(created{{pascalCase moduleName}})
 }
