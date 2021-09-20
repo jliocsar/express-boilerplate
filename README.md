@@ -73,6 +73,7 @@ yarn plop
         |- exceptions.js
         |- pipes.js
         |- constants.js
+        |- utils.js
 ```
 
 ## Module composition

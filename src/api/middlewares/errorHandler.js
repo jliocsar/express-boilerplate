@@ -1,20 +1,19 @@
 import { Http } from '@status/codes'
-import { CelebrateError } from 'celebrate'
+import { isCelebrateError } from 'celebrate'
 
-import { HttpException } from '~api/shared/exceptions'
-import { formatCelebrateError } from '~utils/formatCelebrateError'
+import { formatCelebrateError, isHttpError } from '~shared/utils'
 
-export const errorHandler = () => (error, req, res, next) => {
-  if (error instanceof CelebrateError) {
+export const errorHandler = () => (error, request, response, next) => {
+  if (isCelebrateError(error)) {
     const details = formatCelebrateError(error.details.get('body'))
 
-    return res.status(Http.BadRequest).json({ details })
+    return response.status(Http.BadRequest).json({ details })
   }
 
-  if (error instanceof HttpException) {
+  if (isHttpError(error)) {
     const { message, statusCode, details } = error
 
-    return res.status(statusCode).json({
+    return response.status(statusCode).json({
       message,
       ...(details && { details }),
     })
