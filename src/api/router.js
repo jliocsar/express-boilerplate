@@ -9,8 +9,8 @@ const router = Router()
 
 router.use(booksRouter).use(publishersRouter).use(authorsRouter)
 
-router.get('/', (req, res) =>
-  res.status(Http.ImATeapot).json({
+router.get('/', (request, response) =>
+  response.status(Http.ImATeapot).json({
     healthy: true,
   }),
 )
