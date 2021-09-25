@@ -52,9 +52,13 @@ yarn generate
 |- src/
   |- app.js
   |- config/
+    |- environment.js
   |- database/
+    |- client.js
   |- jobs/
+    |- job-name.js
   |- utils/
+    |- util-name.js
   |- api/
     |- router.js
     |- setup.js
