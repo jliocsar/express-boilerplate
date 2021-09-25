@@ -1,7 +1,7 @@
 import { Joi } from 'celebrate'
 
-import { authorSchema } from '../authors/schemas'
-import { publisherSchema } from '../publishers/schemas'
+import { authorSchema } from '../authors/authors-schemas'
+import { publisherSchema } from '../publishers/publishers-schemas'
 
 export const bookSchema = Joi.object({
   title: Joi.string().required(),

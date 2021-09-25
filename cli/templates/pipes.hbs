@@ -2,7 +2,7 @@ import { Segments } from 'celebrate'
 
 import { createValidationMiddleware } from '~api/shared/pipes'
 
-import { {{camelCase moduleName}}Schema, {{camelCase moduleName}}IdSchema } from './schemas'
+import { {{camelCase moduleName}}Schema, {{camelCase moduleName}}IdSchema } from './{{dashCase moduleName}}-schemas'
 
 export const validate{{pascalCase moduleName}} = createValidationMiddleware({
   [Segments.BODY]: {{pascalCase moduleName}}Schema,

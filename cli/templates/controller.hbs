@@ -1,6 +1,6 @@
 import { Http } from '@status/codes'
 
-import * as {{camelCase moduleName}}Service from './service'
+import * as {{camelCase moduleName}}Service from './{{dashCase moduleName}}-service'
 
 export const findAll{{pascalCase moduleName}}s = async (request, response, next) => {
   const all{{pascalCase moduleName}}s = await {{camelCase moduleName}}Service.findAll{{pascalCase moduleName}}s()

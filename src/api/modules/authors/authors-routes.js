@@ -6,8 +6,8 @@ import {
   deleteAllAuthors,
   findAuthor,
   deleteAuthor,
-} from './controller'
-import { validateAuthor, validateAuthorId } from './pipes'
+} from './authors-controller'
+import { validateAuthor, validateAuthorId } from './authors-pipes'
 
 const authorsRouter = Router()
 

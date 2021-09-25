@@ -5,7 +5,7 @@ import { prisma } from '~database/client'
 import {
   PublisherNotFoundException,
   UniqueRegisterCodeViolationException,
-} from './exceptions'
+} from './publishers-exceptions'
 
 export const findAllPublishers = () => prisma.publisher.findMany()
 

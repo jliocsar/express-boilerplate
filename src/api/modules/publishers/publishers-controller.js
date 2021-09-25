@@ -1,6 +1,6 @@
 import { Http } from '@status/codes'
 
-import * as publishersService from './service'
+import * as publishersService from './publishers-service'
 
 export const findAllPublishers = async (request, response, next) => {
   const allPublishers = await publishersService.findAllPublishers()

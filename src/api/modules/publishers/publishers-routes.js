@@ -6,8 +6,8 @@ import {
   findPublisher,
   deletePublisher,
   deleteAllPublishers,
-} from './controller'
-import { validatePublisher, validatePublisherId } from './pipes'
+} from './publishers-controller'
+import { validatePublisher, validatePublisherId } from './publishers-pipes'
 
 const publishersRouter = Router()
 

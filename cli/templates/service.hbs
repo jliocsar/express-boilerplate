@@ -2,7 +2,7 @@ import { PrismaError } from 'prisma-error-enum'
 
 import { prisma } from '~database/client'
 
-import { {{pascalCase moduleName}}NotFoundException } from './exceptions'
+import { {{pascalCase moduleName}}NotFoundException } from './{{dashCase moduleName}}-exceptions'
 
 export const findAll{{pascalCase moduleName}}s = () => prisma.{{camelCase moduleName}}.findMany()
 

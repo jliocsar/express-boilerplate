@@ -1,6 +1,6 @@
 import { Http } from '@status/codes'
 
-import * as booksService from './service'
+import * as booksService from './books-service'
 
 export const findAllBooks = async (request, response, next) => {
   const allBooks = await booksService.findAllBooks()

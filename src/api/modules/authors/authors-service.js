@@ -5,7 +5,7 @@ import { prisma } from '~database/client'
 import {
   AuthorNotFoundException,
   UniqueRegisterCodeViolationException,
-} from './exceptions'
+} from './authors-exceptions'
 
 export const findAllAuthors = () => prisma.author.findMany()
 

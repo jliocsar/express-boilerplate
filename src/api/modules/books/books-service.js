@@ -6,8 +6,8 @@ import {
   BookNotFoundException,
   RecordNotFoundException,
   UniqueCutterViolationException,
-} from './exceptions'
-import { BOOK_SELECT } from './constants'
+} from './books-exceptions'
+import { BOOK_SELECT } from './books-constants'
 
 export const findAllBooks = () =>
   prisma.book.findMany({

@@ -66,14 +66,14 @@ yarn plop
       |- ...
     |- modules/
       |- module-name/
-        |- controller.js
-        |- routes.js
-        |- schemas.js
-        |- service.js
-        |- exceptions.js
-        |- pipes.js
-        |- constants.js
-        |- utils.js
+        |- module-name-controller.js
+        |- module-name-routes.js
+        |- module-name-schemas.js
+        |- module-name-service.js
+        |- module-name-exceptions.js
+        |- module-name-pipes.js
+        |- module-name-constants.js
+        |- module-name-utils.js
 ```
 
 ## Module composition

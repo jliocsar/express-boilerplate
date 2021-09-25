@@ -6,8 +6,8 @@ import {
   deleteAllBooks,
   findBook,
   deleteBook,
-} from './controller'
-import { validateBook, validateBookId } from './pipes'
+} from './books-controller'
+import { validateBook, validateBookId } from './books-pipes'
 
 const booksRouter = Router()
 

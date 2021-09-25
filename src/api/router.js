@@ -1,9 +1,9 @@
 import { Router } from 'express'
 import { Http } from '@status/codes'
 
-import { booksRouter } from './modules/books/routes'
-import { publishersRouter } from './modules/publishers/routes'
-import { authorsRouter } from './modules/authors/routes'
+import { booksRouter } from './modules/books/books-routes'
+import { publishersRouter } from './modules/publishers/publishers-routes'
+import { authorsRouter } from './modules/authors/authors-routes'
 
 const router = Router()
 
