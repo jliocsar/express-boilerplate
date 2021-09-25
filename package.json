@@ -7,7 +7,7 @@
     "build": "babel src --out-dir build",
     "dev": "nodemon --exec babel-node src/app.js",
     "migrate:dev": "prisma migrate dev",
-    "plop": "plop"
+    "generate": "plop"
   },
   "dependencies": {
     "@prisma/client": "^3.0.2",

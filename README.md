@@ -27,7 +27,7 @@ yarn dev
 ### Generating a module or validation pipe using Plop
 
 ```sh
-yarn plop
+yarn generate
 ```
 
 ## 🧰 Stack
