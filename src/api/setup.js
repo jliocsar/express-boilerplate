@@ -4,7 +4,7 @@ import morgan from 'morgan'
 import 'express-async-errors'
 
 import { router } from './router'
-import { errorHandler } from './middlewares/errorHandler'
+import { errorHandler } from './middlewares/error-handler'
 
 export const applyMiddlewares = app => {
   app.use(express.json())

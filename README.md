@@ -59,7 +59,7 @@ yarn generate
     |- router.js
     |- setup.js
     |- middlewares/
-      |- middlewareName.js
+      |- middleware-name.js
     |- shared/
       |- exceptions.js
       |- pipes.js
