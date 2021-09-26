@@ -57,16 +57,15 @@ yarn generate
     |- client.js
   |- jobs/
     |- job-name.js
-  |- utils/
-    |- util-name.js
   |- api/
     |- router.js
     |- setup.js
     |- middlewares/
       |- middleware-name.js
-    |- shared/
+    |- common/
       |- exceptions.js
       |- pipes.js
+      |- utils.js
       |- ...
     |- modules/
       |- module-name/

@@ -6,10 +6,9 @@
     "outDir": "./build",
     "rootDir": ".",
     "paths": {
-      "~api/*": ["./src/api/*"],
       "~middlewares/*": ["./src/api/middlewares/*"],
       "~modules/*": ["./src/api/modules/*"],
-      "~shared/*": ["./src/api/shared/*"],
+      "~common/*": ["src/api/common/*"],
       "~config/*": ["./src/config/*"],
       "~database/*": ["./src/database/*"],
       "~utils/*": ["./src/utils/*"]

@@ -1,6 +1,6 @@
 import { Segments } from 'celebrate'
 
-import { createValidationMiddleware } from '~api/shared/pipes'
+import { createValidationMiddleware } from '~common/pipes'
 
 import { publisherSchema, publisherIdSchema } from './publishers-schemas'
 

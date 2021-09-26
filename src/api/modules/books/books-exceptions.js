@@ -1,6 +1,6 @@
 import { Http } from '@status/codes'
 
-import { PrismaException } from '~api/shared/exceptions'
+import { PrismaException } from '~common/exceptions'
 
 export class UniqueCutterViolationException extends PrismaException {
   constructor() {

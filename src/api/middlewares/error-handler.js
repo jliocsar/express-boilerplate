@@ -1,7 +1,7 @@
 import { Http } from '@status/codes'
 import { isCelebrateError } from 'celebrate'
 
-import { formatCelebrateError, isHttpError } from '~shared/utils'
+import { formatCelebrateError, isHttpError } from '~common/utils'
 
 export const errorHandler = () => (error, request, response, next) => {
   if (isCelebrateError(error)) {
