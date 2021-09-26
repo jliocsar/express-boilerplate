@@ -22,10 +22,7 @@ export const findPublisher = async id => {
 }
 
 export const deleteAllPublishers = async () => {
-  await prisma.$transaction([
-    prisma.book.deleteMany(),
-    prisma.publisher.deleteMany(),
-  ])
+  await prisma.$transaction([prisma.book.deleteMany(), prisma.publisher.deleteMany()])
 }
 
 export const deletePublisher = async id => {

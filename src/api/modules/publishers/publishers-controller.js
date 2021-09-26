@@ -18,9 +18,7 @@ export const deleteAllPublishers = async (request, response, next) => {
 }
 
 export const deletePublisher = async (request, response, next) => {
-  const deletedPublisher = await publishersService.deletePublisher(
-    request.params.id,
-  )
+  const deletedPublisher = await publishersService.deletePublisher(request.params.id)
   return response.status(Http.NoContent).json(deletedPublisher)
 }
 

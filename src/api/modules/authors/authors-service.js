@@ -2,10 +2,7 @@ import { PrismaError } from 'prisma-error-enum'
 
 import { prisma } from '~database/client'
 
-import {
-  AuthorNotFoundException,
-  UniqueRegisterCodeViolationException,
-} from './authors-exceptions'
+import { AuthorNotFoundException, UniqueRegisterCodeViolationException } from './authors-exceptions'
 
 export const findAllAuthors = () => prisma.author.findMany()
 
@@ -22,10 +19,7 @@ export const findAuthor = async id => {
 }
 
 export const deleteAllAuthors = async () => {
-  await prisma.$transaction([
-    prisma.book.deleteMany(),
-    prisma.author.deleteMany(),
-  ])
+  await prisma.$transaction([prisma.book.deleteMany(), prisma.author.deleteMany()])
 }
 
 export const deleteAuthor = async id => {

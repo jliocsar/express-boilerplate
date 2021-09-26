@@ -17,7 +17,7 @@ export class BookNotFoundException extends PrismaException {
 export class RecordNotFoundException extends PrismaException {
   constructor(cause) {
     // TODO: fix this smelly code 😖
-    const recordModelName = cause.match(/(\'\w+\')/)[0].replaceAll("'", '')
+    const recordModelName = cause.match(/('\w+')/)[0].replaceAll("'", '')
     super(`${recordModelName} not found`, Http.NotFound)
   }
 }

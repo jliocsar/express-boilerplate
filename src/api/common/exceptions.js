@@ -1,11 +1,7 @@
 import { Http } from '@status/codes'
 
 export class HttpException extends Error {
-  constructor(
-    message = 'Server error',
-    statusCode = Http.InternalServerError,
-    details,
-  ) {
+  constructor(message = 'Server error', statusCode = Http.InternalServerError, details) {
     super(message)
     this.statusCode = statusCode
     this.details = details
