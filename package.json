@@ -11,10 +11,11 @@
     "dev": "nodemon --exec babel-node src/app.js",
     "migrate:dev": "prisma migrate dev",
     "lint": "eslint -c .eslintrc.js ./src && prettier -c ./src",
+    "studio": "prisma studio",
     "generate": "plop"
   },
   "dependencies": {
-    "@prisma/client": "^3.0.2",
+    "@prisma/client": "^3.1.1",
     "@status/codes": "^1.6.2",
     "agenda": "^4.2.1",
     "celebrate": "^15.0.0",
@@ -41,6 +42,6 @@
     "nodemon": "^2.0.12",
     "plop": "^2.7.4",
     "prettier": "^2.4.1",
-    "prisma": "^3.0.2"
+    "prisma": "^3.1.1"
   }
 }
