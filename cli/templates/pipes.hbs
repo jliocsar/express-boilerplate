@@ -5,9 +5,9 @@ import { createValidationMiddleware } from '~common/pipes'
 import { {{camelCase moduleName}}IdSchema, {{camelCase moduleName}}Schema } from './{{dashCase moduleName}}-schemas'
 
 export const validate{{pascalCase moduleName}} = createValidationMiddleware({
-  [Segments.BODY]: {{pascalCase moduleName}}Schema,
+  [Segments.BODY]: {{camelCase moduleName}}Schema,
 })
 
 export const validate{{pascalCase moduleName}}Id = createValidationMiddleware({
-  [Segments.PARAMS]: {{pascalCase moduleName}}IdSchema,
+  [Segments.PARAMS]: {{camelCase moduleName}}IdSchema,
 })
