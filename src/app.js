@@ -1,7 +1,7 @@
 import express from 'express'
 
 import { applyMiddlewares } from './api/setup'
-import { PORT, isDev } from './config/environment'
+import { isDev, PORT } from './config/environment'
 import { runPrismaStudio } from './setup'
 
 const app = express()

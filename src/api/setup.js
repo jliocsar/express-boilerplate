@@ -1,10 +1,11 @@
-import express from 'express'
-import cookieParser from 'cookie-parser'
-import morgan from 'morgan'
 import 'express-async-errors'
 
-import { router } from './router'
+import cookieParser from 'cookie-parser'
+import express from 'express'
+import morgan from 'morgan'
+
 import { errorHandler } from './middlewares/error-handler'
+import { router } from './router'
 
 export const applyMiddlewares = app => {
   app.use(express.json())

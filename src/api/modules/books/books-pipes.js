@@ -2,7 +2,7 @@ import { Segments } from 'celebrate'
 
 import { createValidationMiddleware } from '~common/pipes'
 
-import { bookSchema, bookIdSchema } from './books-schemas'
+import { bookIdSchema, bookSchema } from './books-schemas'
 
 export const validateBook = createValidationMiddleware({
   [Segments.BODY]: bookSchema,

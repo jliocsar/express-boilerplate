@@ -14,7 +14,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  plugins: ['prettier', 'import', 'node'],
+  plugins: ['prettier', 'import', 'node', 'simple-import-sort'],
   extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:node/recommended'],
   settings: {
     'import/resolver': { alias },
@@ -27,6 +27,8 @@ module.exports = {
     // only allow imports resolve by `eslint-plugin-import`
     'import/no-unresolved': ['error', { commonjs: true }],
     'import/no-extraneous-dependencies': 'error',
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
     'import/order': [
       'error',
       {

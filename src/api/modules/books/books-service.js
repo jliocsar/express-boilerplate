@@ -2,12 +2,12 @@ import { PrismaError } from 'prisma-error-enum'
 
 import { prisma } from '~database/client'
 
+import { BOOK_SELECT } from './books-constants'
 import {
   BookNotFoundException,
   RecordNotFoundException,
   UniqueCutterViolationException,
 } from './books-exceptions'
-import { BOOK_SELECT } from './books-constants'
 
 export const findAllBooks = () =>
   prisma.book.findMany({

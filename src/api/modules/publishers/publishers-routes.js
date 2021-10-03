@@ -1,11 +1,11 @@
 import { Router } from 'express'
 
 import {
-  findAllPublishers,
   createPublisher,
-  findPublisher,
-  deletePublisher,
   deleteAllPublishers,
+  deletePublisher,
+  findAllPublishers,
+  findPublisher,
 } from './publishers-controller'
 import { validatePublisher, validatePublisherId } from './publishers-pipes'
 

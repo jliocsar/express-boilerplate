@@ -1,6 +1,6 @@
 import { Router } from 'express'
 
-import { findAllBooks, createBook, deleteAllBooks, findBook, deleteBook } from './books-controller'
+import { createBook, deleteAllBooks, deleteBook, findAllBooks, findBook } from './books-controller'
 import { validateBook, validateBookId } from './books-pipes'
 
 const booksRouter = Router()

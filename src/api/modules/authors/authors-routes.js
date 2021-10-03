@@ -1,11 +1,11 @@
 import { Router } from 'express'
 
 import {
-  findAllAuthors,
   createAuthor,
   deleteAllAuthors,
-  findAuthor,
   deleteAuthor,
+  findAllAuthors,
+  findAuthor,
 } from './authors-controller'
 import { validateAuthor, validateAuthorId } from './authors-pipes'
 

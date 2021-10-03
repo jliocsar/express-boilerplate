@@ -2,7 +2,7 @@ import { Segments } from 'celebrate'
 
 import { createValidationMiddleware } from '~common/pipes'
 
-import { authorSchema, authorIdSchema } from './authors-schemas'
+import { authorIdSchema, authorSchema } from './authors-schemas'
 
 export const validateAuthor = createValidationMiddleware({
   [Segments.BODY]: authorSchema,
