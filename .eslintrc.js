@@ -21,11 +21,23 @@ module.exports = {
   },
   rules: {
     'node/no-unsupported-features/es-syntax': ['error', { ignores: ['modules'] }],
-    // only allow imports resolve by `eslint-plugin-import`
-    'import/no-unresolved': ['error', { commonjs: true }],
-    'import/no-extraneous-dependencies': 'error',
     'node/no-missing-require': 'off',
     'node/no-missing-import': 'off',
     'no-unused-vars': 'off',
+    // only allow imports resolve by `eslint-plugin-import`
+    'import/no-unresolved': ['error', { commonjs: true }],
+    'import/no-extraneous-dependencies': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        pathGroups: [
+          {
+            pattern: '~*/**',
+            group: 'internal',
+          },
+        ],
+      },
+    ],
   },
 }
