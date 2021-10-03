@@ -14,6 +14,10 @@ yarn
 
 ### Starting the Postgres server
 
+You can also use [Supabase](https://supabase.io/) (which is highly recommended if you don't want to mess around with Docker).
+
+Make sure you provide your database URL connection in the `prisma/.env` file.
+
 ```sh
 sudo docker-compose up
 ```
