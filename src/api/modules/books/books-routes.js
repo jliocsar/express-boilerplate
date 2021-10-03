@@ -3,14 +3,22 @@ import { Router } from 'express'
 import { createBook, deleteAllBooks, deleteBook, findAllBooks, findBook } from './books-controller'
 import { validateBook, validateBookId } from './books-pipes'
 
+export const ROUTES = {
+  BOOKS: '/books',
+  BOOKS_ID: '/books/:id',
+}
+
 const booksRouter = Router()
 
 booksRouter
-  .route('/books')
+  .route(ROUTES.BOOKS)
   .get(findAllBooks)
   .delete(deleteAllBooks)
   .post([validateBook], createBook)
 
-booksRouter.route('/books/:id').get([validateBookId], findBook).delete([validateBookId], deleteBook)
+booksRouter
+  .route(ROUTES.BOOKS_ID)
+  .get([validateBookId], findBook)
+  .delete([validateBookId], deleteBook)
 
 export { booksRouter }

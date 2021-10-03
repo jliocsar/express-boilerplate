@@ -9,16 +9,21 @@ import {
 } from './publishers-controller'
 import { validatePublisher, validatePublisherId } from './publishers-pipes'
 
+export const ROUTES = {
+  PUBLISHERS: '/publishers',
+  PUBLISHERS_ID: '/publishers/:id',
+}
+
 const publishersRouter = Router()
 
 publishersRouter
-  .route('/publishers')
+  .route(ROUTES.PUBLISHERS)
   .get(findAllPublishers)
   .delete(deleteAllPublishers)
   .post([validatePublisher], createPublisher)
 
 publishersRouter
-  .route('/publishers/:id')
+  .route(ROUTES.PUBLISHERS_ID)
   .get([validatePublisherId], findPublisher)
   .delete([validatePublisherId], deletePublisher)
 
