@@ -115,6 +115,3 @@ The `schemas` file will export all `Joi` schemas that you wish to use in your mo
 
 The `constants` file will export any constant/enum-like variable that you wish to use in your module.
 
----
-
-Made by @jliocsar
