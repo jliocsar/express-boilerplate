@@ -74,12 +74,12 @@ yarn generate
     |- modules/
       |- module-name/
         |- module-name-controller.js
+        |- module-name-constants.js
+        |- module-name-exceptions.js
+        |- module-name-pipes.js
         |- module-name-routes.js
         |- module-name-schemas.js
         |- module-name-service.js
-        |- module-name-exceptions.js
-        |- module-name-pipes.js
-        |- module-name-constants.js
         |- module-name-utils.js
 ```
 

@@ -1,16 +1,17 @@
 import { Router } from 'express'
 
 import { getGoogleConnection, googleSignIn } from './auth-controller'
+import { validateUserCode } from './auth-pipes'
 
 export const ROUTES = {
-  LOGIN: '/login',
-  CONNECTION: '/connection',
+  GOOGLE_LOGIN: '/login/google',
+  GOOGLE_CONNECTION: '/connection/google',
 }
 
 const authRouter = Router()
 
-authRouter.route(ROUTES.LOGIN).post(googleSignIn)
+authRouter.route(ROUTES.GOOGLE_LOGIN).post([validateUserCode], googleSignIn)
 
-authRouter.route(ROUTES.CONNECTION).get(getGoogleConnection)
+authRouter.route(ROUTES.GOOGLE_CONNECTION).get(getGoogleConnection)
 
 export { authRouter }
