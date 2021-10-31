@@ -21,7 +21,6 @@ authorsRouter
   .get(findAllAuthors)
   .delete(deleteAllAuthors)
   .post([validateAuthor], createAuthor)
-
 authorsRouter
   .route(ROUTES.AUTHORS_ID)
   .get([validateAuthorId], findAuthor)

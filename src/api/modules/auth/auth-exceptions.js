@@ -14,3 +14,21 @@ export class GoogleAuthException extends HttpException {
     )
   }
 }
+
+export class InvalidTokenException extends HttpException {
+  constructor() {
+    super('Invalid user token', Http.Unauthorized)
+  }
+}
+
+export class MissingTokenException extends HttpException {
+  constructor() {
+    super('Missing user token', Http.BadRequest)
+  }
+}
+
+export class InvalidUserException extends HttpException {
+  constructor() {
+    super('Invalid user type', Http.BadRequest)
+  }
+}

@@ -97,7 +97,7 @@ The `controller` file will have all Express request handlers. These request hand
 
 ### Routes
 
-The `routes` file will export the router that has all routes from its module.
+The `routes` file will export the router that has all routes from its module. Remember to import the router of CLI generated modules in the `api/router` file.
 
 ### Exceptions
 

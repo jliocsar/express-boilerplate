@@ -15,7 +15,6 @@ booksRouter
   .get(findAllBooks)
   .delete(deleteAllBooks)
   .post([validateBook], createBook)
-
 booksRouter
   .route(ROUTES.BOOKS_ID)
   .get([validateBookId], findBook)

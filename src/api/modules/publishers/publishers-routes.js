@@ -21,7 +21,6 @@ publishersRouter
   .get(findAllPublishers)
   .delete(deleteAllPublishers)
   .post([validatePublisher], createPublisher)
-
 publishersRouter
   .route(ROUTES.PUBLISHERS_ID)
   .get([validatePublisherId], findPublisher)

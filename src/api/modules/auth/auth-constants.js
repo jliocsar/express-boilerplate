@@ -1,7 +1,5 @@
 import { decamelizeKeys } from 'humps'
 
-export const GOOGLE_USER_RESOURCE_NAME = 'people/me'
-export const GOOGLE_USER_PERSON_FIELDS = 'names,emailAddresses'
 export const GOOGLE_DEFAULT_SCOPE = [
   'https://www.googleapis.com/auth/userinfo.profile',
   'https://www.googleapis.com/auth/userinfo.email',
@@ -12,3 +10,5 @@ export const GENERATE_AUTH_URL_OPTIONS = decamelizeKeys({
   prompt: 'consent',
   scope: GOOGLE_DEFAULT_SCOPE,
 })
+
+export const ID_TOKEN_COOKIE_NAME = 'key'
